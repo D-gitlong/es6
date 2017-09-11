@@ -1,0 +1,32 @@
+// 对象的函数解构json
+let json = {
+	a:'jslong',
+	b:'技术龙'
+}
+function fun({a,b='web'}){
+	console.log(a,b);
+}
+fun(json);
+
+// 数组解构
+let arr = ['jslong','技术龙','前端教程'];
+function fun2(a,b,c){
+	console.log(a,b,c);
+}
+fun2(...arr);
+
+// in的用法 判断是否有这个值
+let obj = {
+	a:'技术龙',
+	b:'jslong'
+}
+console.log('a' in obj)
+
+// 数组遍历 forEach
+let arr2 = ['jslong','技术龙','前端教程'];
+//arr2.forEach((val,index)=>console.log(index,val));
+//arr2.filter(x => console.log(x));
+//arr2.some(x => console.log(x));
+console.log(arr2.map(x=>'web'));
+
+

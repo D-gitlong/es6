@@ -1,0 +1,30 @@
+es6转es5写法：
+1、在src文件夹中建立index.js文件，文件内容：
+let a=1;
+console.log(a);
+
+2、建立空文件夹dist，用来生成转化成功的es5写法的文件
+
+3、建立index.html，引用src的index.js文件
+
+4、cnpm init -y             初始化package.json文件
+
+5、cnpm install -g babel-cli    安装
+
+6、建立.babelrc文件，内容如下：
+{
+	"presets":[
+		"es2015"
+	],
+	"plugins":[]
+}
+
+7、cnpm install --save-dev babel-preset-es2015 babel-cli   安装
+
+8、babel src/index.js -o dist/index.js  生成文件
+
+9、更便捷的生成文件命令：cnpm run build 需要在package.json文件中配置
+"scripts": {
+    "build": "babel src/index.js -o dist/index.js"
+  }
+

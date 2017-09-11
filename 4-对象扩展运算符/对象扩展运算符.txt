@@ -1,0 +1,33 @@
+// ...扩展运算符
+// function jslong(...arg){ //arg可自由定义
+// 	console.log(arg[0]);
+// 	console.log(arg[1]);
+// 	console.log(arg[2]);
+// 	console.log(arg[3]);
+// }
+// jslong(1,2,3)
+
+//例子：
+// let arr1 = ['aa','bb','cc'];
+// //let arr2 = arr1;
+// let arr2 = [...arr1];
+// console.log(arr2);
+// arr2.push('ddd');
+// console.log(arr2);
+// console.log(arr1);
+
+
+//rest ...
+function jslong(first,...arg){
+	//console.log(arg.length);
+	//就方法
+	// for (let i = 0; i < arg.length; i++) {
+	// 	console.log(arr[i]);
+	// }
+	// 新方法
+	for(let val of arg){
+		console.log(val);
+	}
+}
+
+jslong(0,1,2,3,4,5,6,7);

@@ -1,0 +1,20 @@
+// let jslong = '技术龙';
+// let blog = `学习字符串模板ff${jslong}`;
+// document.write(blog);
+
+// let a=1;
+// let b=2;
+// let r=`${a+b}`;
+// document.write(r);
+
+
+//includes 判断是否含有这个值，跟indexOf类似
+let jslong = '技术龙';
+
+
+let blog = `技术龙学习字符串模技术龙板ljsd`;
+document.write(blog.includes(jslong));
+document.write(blog.startsWith(jslong)); //开头是否有这个值
+document.write(blog.endsWith(jslong)); //结尾是否有这个值
+
+document.write('long'.repeat(10)); //复制

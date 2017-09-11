@@ -1,0 +1,39 @@
+//proxy 代理 ES6 增加对象和函数（方法） 生命周期 预处理
+let obj={
+	add:function(val){
+		return val+100;
+	},
+}
+// console.log(obj.add(100));
+// console.log(obj.name);
+
+let pro = new Proxy({
+	add:function(val){
+		return val+100;
+	},
+	name:'i am long'
+},{
+	get:function(target,key,property){
+		console.log('come in get');
+		return target[key];
+	},
+	set:function(target,key,value,receiver){
+		console.log(`setting ${key} = ${value}`);
+		return target[key]=value;
+	}
+})
+console.log(pro.add(20));
+pro.name='技术龙';
+console.log(pro.name);
+
+let target=function(){
+	return 'i am jslong';
+}
+let handler=function(){
+	apply(target,ctx,args){
+		console.log('do apply');
+		return Reflect.apply(...arguments);
+	}
+}
+let pro2 = new Proxy(target,handler);
+

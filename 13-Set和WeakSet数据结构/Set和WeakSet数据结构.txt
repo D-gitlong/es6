@@ -1,0 +1,40 @@
+// Set 数据结构 不允许值一样
+let setArr=new Set(['jslong','long','web']);
+
+setArr.add('jslong1');
+
+// has 查找
+//console.log(setArr.has('jslong2'));
+
+//setArr.clear(); //删除全部
+
+//setArr.delete('web'); //删除部分
+console.log(setArr);
+
+// for of
+// for(let item of setArr){
+// 	console.log(item);
+// }
+
+// forEach
+setArr.forEach((val)=>console.log(val));
+
+// size
+console.log(setArr.size);
+
+let weakObj=new WeakSet();
+let obj={a:'jslog',b:'技术龙'};
+let obj1={a:'jslog',b:'技术龙'};
+weakObj.add(obj);
+weakObj.add(obj1);
+console.log(weakObj);
+
+
+
+
+
+
+
+
+
+

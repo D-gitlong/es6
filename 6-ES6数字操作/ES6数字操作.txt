@@ -1,0 +1,30 @@
+// // 二进制声明
+// let binary = 0B010101;
+// console.log(binary);
+
+// // 八进制声明
+// let octal = 0o666;
+// console.log(octal);
+
+// 数字判断
+let a=11/4;
+console.log(Number.isFinite(a));
+console.log(Number.isFinite('jslong'));
+console.log(Number.isFinite(NaN));
+console.log(Number.isFinite(undefined));
+
+//NaN是特殊的非数字，可以使用Number.isNaN()来进行验证
+console.log(Number.isNaN(NaN));
+
+//判断是否为整数Number.isInteger(xx)
+let b=123.1;
+console.log(Number.isInteger(b));
+
+// 旧方法
+let jslong = Math.pow(2,53)-1; //最大安全数
+// console.log(jslong);
+
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+
+console.log(Number.isSafeInteger(jslong))//判断是否是安全整数

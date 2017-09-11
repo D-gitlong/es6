@@ -1,0 +1,35 @@
+// 变量的解构赋值
+// let [a,[b,c],d] = [1,[2,3],4]
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+// 默认值
+// let [foo=false] = [];
+// console.log(foo);
+
+//数组的解构
+//undefined null
+// let [a,b='技术龙'] = ['linchulong',null];
+// console.log(a+b);
+
+//对象的解构
+// let{foo,bar} = {bar:'技术龙',foo:'linchulong'}
+// console.log(bar+foo);
+
+// let foo;
+// ({foo} = {foo:'jishulong'}); //需要加括号，不然报错
+// console.log(foo);
+
+//字符串的解构
+const [a,b,c,d,e,f] = 'jslong'
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+console.log(f);
+
+
+

@@ -1,0 +1,30 @@
+// class
+class Coder{
+	name(val){
+		console.log(val);
+		return val;
+	}
+	skill(val){
+		console.log(this.name('jslong')+'--'+'skill:'+val);
+	}
+	constructor(a,b){
+		this.a=a;
+		this.b=b;
+	}
+	add(){
+		return this.a+this.b;
+	}
+}
+
+class htmler extends Coder{
+
+}
+// let jslong=new Coder;
+// jslong.skill('web');
+
+let jslong=new Coder(1,2);
+console.log(jslong.add())
+
+let long = new htmler(5,8);
+long.name('hello');
+console.log(long.add())

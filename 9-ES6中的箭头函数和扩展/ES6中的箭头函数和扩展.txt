@@ -1,0 +1,5 @@
+var add = (a,b=1) => {
+	console.log('jslong');
+	return a+b;
+}
+console.log(add(1))

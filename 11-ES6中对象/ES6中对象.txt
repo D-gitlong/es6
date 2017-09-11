@@ -1,0 +1,41 @@
+//赋值
+let name='jslong';
+let skill = 'web';
+let obj={
+	name,
+	skill
+}
+console.log(obj);
+
+// key值的构建
+let key='skill';
+var obj2={
+	[key]:'web'
+}
+console.log(obj2);
+
+// 自定义对象方法
+let obj3={
+	add:function(a,b){
+		return a+b;
+	}
+}
+console.log(obj3.add(1,2));
+
+// is()  ===同值相等，is严格相等
+let obj4={name:'jslong'};
+let obj5={name:'jslong'};
+console.log(obj4.name===obj5.name);
+console.log(Object.is(obj4.name,obj5.name));
+
+console.log(+0===-0);
+console.log(NaN===NaN);
+console.log(Object.is(+0,-0));
+console.log(Object.is(NaN,NaN));
+
+// assign 组合一起
+let a={a:'jslong'};
+let b={b:'jslongb'};
+let c={c:'jslongc'};
+let d=Object.assign(a,b,c);
+console.log(d);
